@@ -43,9 +43,8 @@ class Sanitizer	{
 		$title = preg_replace('/&.+?;/', '', $title); // kill entities
 		$title = preg_replace('/[^%a-z0-9 _-]/', '', $title);
 		$title = preg_replace('/\s+/', '-', $title);
-		$title = preg_replace('|-+|', '-', $title);        
+		$title = preg_replace('|-+|', '-', $title);  
 		$title = trim($title, '-');
-        
 		return $title;
 	}
 	
