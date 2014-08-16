@@ -39,5 +39,12 @@
 					<strong>{$jobs_count_in_other_cities}</strong> {$translations.jobscity.sidebar_jobs_in} <a href="{$BASE_URL}jobs-in-other-cities/">{$translations.sidebar.other_cities}</a>
 					{/if}
 				{/if}
+				
+				<ul>
+                   <h2>Category</h2>
+                    {section name=tmp loop=$categories}
+                        <li id="{$categories[tmp].var_name}" {if $current_category == $categories[tmp].var_name}class="selected"{/if}><a href="{$BASE_URL}{$URL_JOBS}/{$categories[tmp].var_name}/" title="{$categories[tmp].name}"><span>{$categories[tmp].name}</span><span class="cnr">&nbsp;</span></a></li>
+                    {/section}
+                </ul>
 			</div><!-- #stats -->
 			{/if}
